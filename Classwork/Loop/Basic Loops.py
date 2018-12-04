@@ -49,4 +49,14 @@ def dice_roll(times):
 
 ##4
 def digit_magic(num):
-    
+    num = str(num)
+    odd = 0
+    even = 0
+
+    for digit in num:
+        digit = int(digit)
+        if digit % 2 == 1:
+            odd += 1
+        elif digit % 2 == 0:
+            even += 1
+    print(odd, even)
