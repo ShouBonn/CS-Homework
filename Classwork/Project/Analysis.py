@@ -27,15 +27,20 @@ def average_runtime(dict):
             if movie[1].isdigit():
                 total_runtime += int(movie[1])
                 count_elements += 1
-        dictionary[element] = total_runtime/count_elements
+        if count_elements != 0:
+            dictionary[element] = total_runtime/count_elements
     return dictionary
 
 
 aver_runtime_per_year = average_runtime(by_year)
-
-for key in aver_runtime_per_year:
-    print(key, average_runtime(key))
-
+aver_runtime_by_title = average_runtime(by_title)
+aver_runtime_by_genre = average_runtime(by_subject)
+aver_runtime_by_actor = average_runtime(by_actor)
+aver_runtime_by_actress = average_runtime(by_actress)
+aver_runtime_by_director = average_runtime(by_director)
+aver_runtime_by_popularity = average_runtime(by_popularity)
+aver_runtime_by_awards = average_runtime(by_awards)
+aver_runtime_by_image = average_runtime(by_image)
 
 
 
@@ -56,8 +61,4 @@ num_movies_by_director = num_of_movies(by_director)
 num_movies_by_popularity = num_of_movies(by_popularity)
 num_movies_by_awards = num_of_movies(by_awards)
 num_movies_by_image = num_of_movies(by_image)
-
-# for key in num_movies_by_image:
-#     print(key, num_movies_by_image[key])
-
 

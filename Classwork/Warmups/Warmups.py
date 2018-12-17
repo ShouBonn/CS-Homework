@@ -125,26 +125,38 @@
 # for i in range(10):
 #     print('Num ', i, ": ", integer[i])
 
+#
+# a = [1, -3, 5, 7, 15, -4, 0, -6, -10, -11, 12]
+#
+# def sort_odd_and_even(lst):
+#     for j in range(len(lst)):
+#         for i in range(len(lst)):
+#             num = lst[i]
+#             if abs(lst[i]) % 2 == 0:
+#                 lst.pop(i)
+#                 lst.append(num)
+#     return lst
+#
+#
+# def sort_positive_and_negative(lst):
+#     for j in range(len(lst)):
+#         for i in range(len(lst)):
+#             num = lst[i]
+#             if lst[i] < 0:
+#                 lst.pop(i)
+#                 lst.append(num)
+#     return lst
+#
+# print(sort_positive_and_negative(a))
 
-a = [1, -3, 5, 7, 15, -4, 0, -6, -10, -11, 12]
+import matplotlib.pyplot as plt
+import random
 
-def sort_odd_and_even(lst):
-    for j in range(len(lst)):
-        for i in range(len(lst)):
-            num = lst[i]
-            if abs(lst[i]) % 2 == 0:
-                lst.pop(i)
-                lst.append(num)
-    return lst
+data = []
+total = 10
+for i in range(0, 100):
+    total += random.random() * 2 - 1
+    data.append(total)
 
-
-def sort_positive_and_negative(lst):
-    for j in range(len(lst)):
-        for i in range(len(lst)):
-            num = lst[i]
-            if lst[i] < 0:
-                lst.pop(i)
-                lst.append(num)
-    return lst
-
-print(sort_positive_and_negative(a))
+plt.plot(data, 'b-')
+plt.show()
