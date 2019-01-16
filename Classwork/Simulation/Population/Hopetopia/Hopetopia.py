@@ -36,7 +36,6 @@ for i in range(year):
     population = male + female
 
     if population > 1000:
-        print(87654)
         if witch > 0:
             if random() <= successful_potion_rate:
                 print("Black Death!!!")
@@ -66,9 +65,10 @@ for i in range(year):
     print(population)
 
 plt.figure()
-plt.plot(x_coord, male_coord)
-plt.plot(x_coord, female_coord)
-plt.plot(x_coord, population_coord)
+plt.plot(x_coord, male_coord, label = 'Male')
+plt.plot(x_coord, female_coord, label = 'Female')
+plt.plot(x_coord, population_coord, label = 'Population')
+plt.legend(loc = 'upper right')
 plt.xlabel("Years")
 plt.ylabel("Population")
 plt.title("Hopetopia Population Growth")
